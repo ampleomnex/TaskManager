@@ -28,7 +28,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-user"></span> Employee</a></li>
                             <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-tasks"></span> Project</a></li>
-                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-align-justify"></span> Function</a></li>
+                            <li><a href="@Url.Action("Index", "Functions")"><span class="glyphicon glyphicon-align-justify"></span> Function</a></li>
                             <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-pencil"></span> Role</a></li>
                             <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-align-justify"></span> Epic</a></li>
                             <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-pencil"></span> Team</a></li>
@@ -43,8 +43,9 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
+       
+
+        <footer class="navbar-fixed-bottom">
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>

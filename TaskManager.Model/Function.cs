@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TaskManager.Model
+{
+    public class Function
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Function Name is required..")]
+        [Display(Name = "Function Name")]
+        public string FunctionName { get; set; }
+
+        [Required(ErrorMessage = "Department is required..")]
+        [Display(Name = "Department Name")]
+        public int DepartmentID { get; set; }
+        [ForeignKey("Id")]
+        public virtual Department Departments { get; set; }
+
+        public int CreatedBy { get; set; }
+
+
+    }
+}
