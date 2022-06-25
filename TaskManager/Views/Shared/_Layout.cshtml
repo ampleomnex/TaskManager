@@ -16,13 +16,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Task Manager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Task", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Reports", "About", "Home")</li>
+
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-list-alt"></span> Manage <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-user"></span> Employee</a></li>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-tasks"></span> Project</a></li>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-align-justify"></span> Function</a></li>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-pencil"></span> Role</a></li>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-align-justify"></span> Epic</a></li>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-pencil"></span> Team</a></li>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-align-justify"></span> Customer</a></li>
+                            <li><a href="@Url.Action("Index", "Departments")"><span class="glyphicon glyphicon-pencil"></span> Department</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
