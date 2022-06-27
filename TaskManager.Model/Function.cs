@@ -13,7 +13,7 @@ namespace TaskManager.Model
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Function Name is required..")]
+        [Required(ErrorMessage = "Function is required..")]
         [Display(Name = "Function Name")]
         public string FunctionName { get; set; }
 
